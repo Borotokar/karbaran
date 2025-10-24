@@ -1,5 +1,15 @@
-# Launch Screen Assets
+# url\_launcher\_linux
 
-You can customize the launch screen with your own desired assets by replacing the image files in this directory.
+The Linux implementation of [`url_launcher`][1].
 
-You can also do it by opening your Flutter project's Xcode project with `open ios/Runner.xcworkspace`, selecting `Runner/Assets.xcassets` in the Project Navigator and dropping in the desired images.
+## Usage
+
+This package is [endorsed][2], which means you can simply use `url_launcher`
+normally. This package will be automatically included in your app when you do,
+so you do not need to add it to your `pubspec.yaml`.
+
+However, if you `import` this package to use any of its APIs directly, you
+should add it to your `pubspec.yaml` as usual.
+
+[1]: https://pub.dev/packages/url_launcher
+[2]: https://flutter.dev/to/endorsed-federated-plugin
