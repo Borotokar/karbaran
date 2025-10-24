@@ -1,15 +1,8 @@
-# path\_provider\_linux
+# Flutter Local Notifications Linux plugin
 
-The linux implementation of [`path_provider`][1].
+The Linux implementation of [`flutter_local_notifications`](https://pub.dev/packages/flutter_local_notifications).
 
 ## Usage
 
-This package is [endorsed][2], which means you can simply use `path_provider`
-normally. This package will be automatically included in your app when you do,
-so you do not need to add it to your `pubspec.yaml`.
-
-However, if you `import` this package to use any of its APIs directly, you
-should add it to your `pubspec.yaml` as usual.
-
-[1]: https://pub.dev/packages/path_provider
-[2]: https://flutter.dev/docs/development/packages-and-plugins/developing-packages#endorsed-federated-plugin
+This package is already included as part of the `flutter_local_notifications` package dependency, and will
+be included when using `flutter_local_notifications` as normal.
