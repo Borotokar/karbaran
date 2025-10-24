@@ -1,15 +1,15 @@
-# url\_launcher\_linux
+# path\_provider\_linux
 
-The Linux implementation of [`url_launcher`][1].
+The linux implementation of [`path_provider`][1].
 
 ## Usage
 
-This package is [endorsed][2], which means you can simply use `url_launcher`
+This package is [endorsed][2], which means you can simply use `path_provider`
 normally. This package will be automatically included in your app when you do,
 so you do not need to add it to your `pubspec.yaml`.
 
 However, if you `import` this package to use any of its APIs directly, you
 should add it to your `pubspec.yaml` as usual.
 
-[1]: https://pub.dev/packages/url_launcher
-[2]: https://flutter.dev/to/endorsed-federated-plugin
+[1]: https://pub.dev/packages/path_provider
+[2]: https://flutter.dev/docs/development/packages-and-plugins/developing-packages#endorsed-federated-plugin
