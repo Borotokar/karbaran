@@ -8,7 +8,7 @@ include("C:/Users/mehrmall/AppData/Local/Android/Sdk/ndk/27.0.12077973/build/cma
 set(CMAKE_SYSTEM "Android-1")
 set(CMAKE_SYSTEM_NAME "Android")
 set(CMAKE_SYSTEM_VERSION "1")
-set(CMAKE_SYSTEM_PROCESSOR "aarch64")
+set(CMAKE_SYSTEM_PROCESSOR "x86_64")
 
 set(CMAKE_CROSSCOMPILING "TRUE")
 

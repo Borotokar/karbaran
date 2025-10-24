@@ -1,2 +1,2 @@
-D:/brotokar/mobile app/borotokar/android/app/.cxx/Debug/j3w19d6h/arm64-v8a/CMakeFiles/edit_cache.dir
-D:/brotokar/mobile app/borotokar/android/app/.cxx/Debug/j3w19d6h/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/brotokar/mobile app/borotokar/android/app/.cxx/Debug/j3w19d6h/x86_64/CMakeFiles/edit_cache.dir
+D:/brotokar/mobile app/borotokar/android/app/.cxx/Debug/j3w19d6h/x86_64/CMakeFiles/rebuild_cache.dir

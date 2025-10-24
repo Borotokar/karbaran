@@ -6,14 +6,14 @@
     [
       "C:\\Users\\mehrmall\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
-      "D:\\brotokar\\mobile app\\borotokar\\android\\app\\.cxx\\Debug\\j3w19d6h\\armeabi-v7a",
+      "D:\\brotokar\\mobile app\\borotokar\\android\\app\\.cxx\\Debug\\j3w19d6h\\x86_64",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
     "C:\\Users\\mehrmall\\AppData\\Local\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
-    "D:\\brotokar\\mobile app\\borotokar\\android\\app\\.cxx\\Debug\\j3w19d6h\\armeabi-v7a",
+    "D:\\brotokar\\mobile app\\borotokar\\android\\app\\.cxx\\Debug\\j3w19d6h\\x86_64",
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {}
