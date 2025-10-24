@@ -1,109 +1,111 @@
-## 2.2.1
+## [6.0.0]
 
-* Adds pub topics to package metadata.
-* Updates minimum supported SDK version to Flutter 3.7/Dart 2.19.
+*  **Breaking change** bumped minimum Flutter SDK requirement to 3.22.0 and Dart SDK requirement to 3.4.0
+* Bumped `flutter_local_notifications_platform_interface` dependency
 
-## 2.2.0
+## [5.0.0]
 
-* Adds getApplicationCachePath() for storing app-specific cache files.
+* **Breaking change** Bumped minimum Flutter SDK requirement to 3.13
 
-## 2.1.11
+## [4.0.1]
 
-* Removes obsolete null checks on non-nullable values.
-* Updates minimum supported SDK version to Flutter 3.3/Dart 2.18.
+* Fixed issue [#2368](https://github.com/MaikuB/flutter_local_notifications/issues/2368). This involved updating pubspec so it defines that it implements the Linux implementation of `flutter_local_notifications` and updating the code so it registers the Linux implementation
 
-## 2.1.10
+## [4.0.0+1]
 
-* Clarifies explanation of endorsement in README.
-* Aligns Dart and Flutter SDK constraints.
+* Bumped maximum Dart SDK constraint
 
-## 2.1.9
+## [4.0.0]
 
-* Updates links for the merge of flutter/plugins into flutter/packages.
+* **Breaking change** the `id` property of the `ActiveNotification` class is now nullable to help indicate that the notification may not have been created by the plugin e.g. it was from Firebase Cloud Messaging. Thanks to the PR from [frankvollebregt](https://github.com/frankvollebregt)
+* **Breaking change** the following classes are now enums
+    * `LinuxNotificationCategory`
+    * `LinuxNotificationUrgency`
+* Switched from using `mocktail` to `mockito` for consistency and with it getting more updates as a first-party package
 
-## 2.1.8
+## [3.0.0+1]
 
-* Adds compatibility with `xdg_directories` 1.0.
-* Updates minimum Flutter version to 3.0.
+* Bumped `xdg_directories` dependency constraints
 
-## 2.1.7
+## [3.0.0]
 
-* Bumps ffi dependency to match path_provider_windows.
+* Updated minimum Flutter version to 3.0.0. Note that technically this was already a requirement by `flutter_local_notifications_linux` 2.0.0 as `ffi` 2.0.0 requires Dart 2.17 at a minimum and that shipped with Flutter 3.0.0
+* Added explicit `ffi` dependency that plugin was already using
 
-## 2.1.6
+## [2.0.0]
 
-* Fixes library_private_types_in_public_api, sort_child_properties_last and use_key_in_widget_constructors
-  lint warnings.
+* Bumped `dbus` dependency
 
-## 2.1.5
+## [1.0.0]
 
-* Removes dependency on `meta`.
+* **Breaking change** The linux notification categories defined by `LinuxNotificationCategory` no longer has factory constructors but has static constant fields instead to make the semantics more similar to access enum values
+* Updated minimum Flutter version to 2.8 to align with the minimum Dart SDK version of 2.1.5 required by the `dbus` package
 
-## 2.1.4
 
-* Fixes `getApplicationSupportPath` handling of applications where the
-  application ID is not set.
+## [0.5.1]
 
-## 2.1.3
+* Fixes issue [1656](https://github.com/MaikuB/flutter_local_notifications/issues/1656) where a version constraint issue occurred with the `path` package. The version constraint has been lowered to resolve the issue
 
-* Change getApplicationSupportPath from using executable name to application ID (if provided).
-  * If the executable name based directory exists, continue to use that so existing applications continue with the same behaviour.
+## [0.5.0+1]
 
-## 2.1.2
+* Added a note to 0.5.0 changelog to make it clear that the 0.5.0 stable release doesn't have changes from the 0.5.0 pre-releases
 
-* Fixes link in README.
+## [0.5.0]
 
-## 2.1.1
+* Added support for icons to be specified via file path. Thanks to PR from [Yaroslav Pronin](https://github.com/proninyaroslav)
+* **Note**: the 0.5.0 release *does not* have the same as what was on the 0.5.0 pre-releases. Those pre-releases are more closely related to changes being done for the 10.0.0 pre-release of `flutter_local_notifications`. What was in the 0.5.0 pre-releases will be shifted to a 1.0.0 pre-release of `flutter_local_notifications_linux`
 
-* Removed obsolete `pluginClass: none` from pubpsec.
+## [0.5.0-dev.4]
 
-## 2.1.0
+* **Breaking change** callbacks have now been reworked. `onDidReceiveNotificationResponse` is invoked only when the app is running. This works for when a user has selected a notification or notification action. This replaces the `onSelectNotification` callback that existed before
+* **Breaking change** the `NotificationAppLaunchDetails` has been updated to contain an instance `NotificationResponse` class with the `payload` belonging to the `NotificationResponse` class. This is to allow knowing more details about what caused the app to launch e.g. if a notification action was used to do so
 
-* Now `getTemporaryPath` returns the value of the `TMPDIR` environment variable primarily. If `TMPDIR` is not set, `/tmp` is returned.
+## [0.5.0-dev.3]
 
-## 2.0.2
+* Includes changes from 0.4.2
 
-* Updated installation instructions in README.
+## [0.5.0-dev.2]
 
-## 2.0.1
+* Added support for notification actions
 
-* Add `implements` to pubspec.yaml.
-* Add `registerWith` method to the main Dart class.
+## [0.5.0-dev.1]
 
-## 2.0.0
+* Bumped `flutter_local_notifications_platform_interface` dependency
 
-* Migrate to null safety.
+## [0.4.2]
 
-## 0.1.1+3
+* Bumped dependencies. Thanks to PR from [Guy Luz](https://github.com/guyluz11)
 
-* Update Flutter SDK constraint.
+## [0.4.1+1]
 
-## 0.1.1+2
+* Fixed minor casing error in 0.4.1 changelog entry
 
-* Log errors in the example when calls to the `path_provider` fail.
+## [0.4.1]
 
-## 0.1.1+1
+* Fix `initialize()` returning null all the time instead of returning an appropriate boolean value to indicate if plugin has been initialised
 
-* Check in linux/ directory for example/
+## [0.4.0]
 
-## 0.1.1 - NOT PUBLISHED
+*  Bumped `dbus` dependency.
 
-* Reverts changes on 0.1.0, which broke the tree.
+## [0.3.0]
 
-## 0.1.0 - NOT PUBLISHED
+* **Breaking change** the `SelectNotificationCallback` typedef now maps to a function that returns `void` instead of a `Future<dynamic>`. This change was done to better communicate the plugin doesn't actually await any asynchronous computation and is similar to how button pressed callbacks work for Flutter where they are typically use [`VoidCallback`](https://api.flutter.dev/flutter/dart-ui/VoidCallback.html)
 
-* This release updates getApplicationSupportPath to use the application ID instead of the executable name.
-  * No migration is provided, so any older apps that were using this path will now have a different directory.
+## [0.2.0+1]
 
-## 0.0.1+2
+* Fixed links to GNOME developer documentation referenced in API docs
 
-* This release updates the example to depend on the endorsed plugin rather than relative path
+## [0.2.0]
 
-## 0.0.1+1
+* Fixed issue when an app using the plugin is built on the web by using conditional imports
+* Changed the logic where notification IDs are saved so that `$XDG_RUNTIME_DIR` environment variable is not set but `$TMPDIR` is set, then they are saved to a file within the `/$TMPDIR/APP_NAME/USER_ID/SESSION_ID` directory. If `$TMPDIR` is not set then, it would save to `/tmp/APP_NAME/USER_ID/SESSION_ID`
+* Fixed an issue where errors would occur if the plugin was initialised multiple times
 
-* This updates the readme and pubspec and example to reflect the endorsement of this implementation of `path_provider`
+## [0.1.0+1]
 
-## 0.0.1
+*  Point to types within platform interface
 
-* The initial implementation of path\_provider for Linux
-  * Implements getApplicationSupportPath, getApplicationDocumentsPath, getDownloadsPath, and getTemporaryPath
+## [0.1.0]
+
+* Initial version for Linux

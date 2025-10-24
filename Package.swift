@@ -4,23 +4,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "share_plus",
+    name: "package_info_plus",
     platforms: [
         .iOS("12.0"),
     ],
     products: [
-        .library(name: "share-plus", targets: ["share_plus"])
+        .library(name: "package-info-plus", targets: ["package_info_plus"])
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "share_plus",
+            name: "package_info_plus",
             dependencies: [],
             resources: [
                 .process("PrivacyInfo.xcprivacy"),
             ],
             cSettings: [
-                .headerSearchPath("include/share_plus")
+                .headerSearchPath("include/package_info_plus")
             ]
         )
     ]
